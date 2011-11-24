@@ -16,3 +16,4 @@
 .idea/*
 .rvmrc
 log/*
+config/database.yml
