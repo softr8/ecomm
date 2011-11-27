@@ -1,0 +1,2 @@
+jQuery ->
+  $('#topbar').dropdown()

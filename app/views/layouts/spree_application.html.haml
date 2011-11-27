@@ -1,0 +1,31 @@
+!!!
+%html
+  %head{"data-hook" => "inside_head"}
+    = stylesheet_link_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+    = render :partial => 'shared/head'
+    %style{type: "text/css"}
+      body { padding-top: 80px;}
+  %body{"data-hook" => "body", :id => @body_id || 'default'}
+    #header{"data-hook" => "", class: "topbar"}
+      #row{class: "topbar-inner"}
+        #logo{class: "container-fluid"}
+          = link_to "Crowd Store", root_url
+          %ul#nav-bar{"data-hook" => ""}
+            = render :partial => 'shared/login_bar'
+            -#= render :partial => 'shared/nav_bar'
+    #wrapper{"data-hook" => "", class: "container-fluid"}
+      - if content_for?(:sidebar)
+        #sidebar{"data-hook" => "", class: "sidebar"}
+          = yield :sidebar
+      #content{"data-hook" => "", class: "content"}
+        Main Content
+        = breadcrumbs(@taxon)
+        = flash_messages
+        = yield
+        %footer{"data-hook" => ""}
+          #footer-left{"data-hook" => ""}
+            %p
+              = t(:powered_by)
+              = link_to 'CrowdInt', 'http://www.crowdint.com/'
+          #footer-right{"data-hook" => ""}
+    = render :partial => 'shared/google_analytics'

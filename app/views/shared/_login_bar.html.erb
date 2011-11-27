@@ -1,0 +1,17 @@
+<% if current_user %>
+  <p class="pull-right">
+    <%= link_to t(:my_account), account_path %> |
+    <%= link_to t(:logout), destroy_user_session_path %>
+  </p>
+<% else %>
+  <ul class="tabs">
+    <li class="dropdown" data-dropdown="dropdown">
+      <a href="#" class="dropdown-toggle">Login with</a>
+      <ul class="dropdown-menu">
+        <% AuthenticationMethod.all.each do |method| %>
+          <li><%= link_to method.preferred_provider.humanize, "/user_authentications/auth/#{method.preferred_provider}" %></li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+<% end %>

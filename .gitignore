@@ -17,3 +17,6 @@
 .rvmrc
 log/*
 config/database.yml
+Procfile
+public/spree
+public/assets

@@ -10,5 +10,7 @@
 //= require store/spree_api
 //= require store/spree_dash
 //= require store/spree_promo
+//= require bootstrap-dropdown
+
 
 //= require_tree .
