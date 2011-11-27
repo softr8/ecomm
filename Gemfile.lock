@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/jbrien/spree_sunspot_search.git
+  revision: dbeb34c149c7d7ecc3f94820e0ae4a9e4798e13a
+  specs:
+    spree_sunspot_search (0.10b)
+      progress_bar (= 0.4.0)
+      sunspot_rails (>= 1.3.0rc3)
+
+GIT
   remote: git://github.com/spree/spree_social.git
   revision: 383495542315fff44097b40dac543897e4e977b0
   tag: v1.2
@@ -118,6 +126,7 @@ GEM
       warden (~> 1.0.3)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    escape (0.0.4)
     evernote (1.1.0)
       thrift_client
     execjs (1.2.9)
@@ -128,6 +137,7 @@ GEM
       addressable (~> 2.2.6)
       multipart-post (~> 1.1.3)
       rack (>= 1.1.0, < 2)
+    fattr (2.2.0)
     foreman (0.26.1)
       term-ansicolor (~> 1.0.5)
       thor (>= 0.13.6)
@@ -172,6 +182,8 @@ GEM
     oauth2 (0.5.1)
       faraday (~> 0.7.4)
       multi_json (~> 1.0.3)
+    options (2.3.0)
+      fattr
     orm_adapter (0.0.5)
     paperclip (2.4.1)
       activerecord (>= 2.3.0)
@@ -181,6 +193,10 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    pr_geohash (1.0.0)
+    progress_bar (0.4.0)
+      highline (~> 1.6.1)
+      options (~> 2.3.0)
     rack (1.3.5)
     rack-cache (1.1)
       rack (>= 0.4)
@@ -212,6 +228,8 @@ GEM
     rd_resource_controller (1.0.1)
     rdoc (3.11)
       json (~> 1.4)
+    rsolr (1.0.6)
+      builder (>= 2.1.2)
     rspec (2.7.0)
       rspec-core (~> 2.7.0)
       rspec-expectations (~> 2.7.0)
@@ -232,6 +250,15 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     state_machine (1.0.1)
     stringex (1.0.3)
+    sunspot (1.3.0)
+      escape (~> 0.0.4)
+      pr_geohash (~> 1.0)
+      rsolr (~> 1.0.6)
+    sunspot_rails (1.3.0)
+      nokogiri
+      sunspot (= 1.3.0)
+    sunspot_solr (1.3.0)
+      escape (~> 0.0.4)
     term-ansicolor (1.0.7)
     thor (0.14.6)
     thrift (0.7.0)
@@ -263,4 +290,6 @@ DEPENDENCIES
   sass-rails (~> 3.1.5.rc.2)
   spree!
   spree_social!
+  spree_sunspot_search!
+  sunspot_solr
   uglifier (>= 1.0.3)

@@ -7,6 +7,8 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'spree', git: 'https://github.com/spree/spree.git', branch: '0-70-stable'
 gem 'spree_social', :git => 'git://github.com/spree/spree_social.git' , :tag => 'v1.2'
+gem 'spree_sunspot_search', git: 'git://github.com/jbrien/spree_sunspot_search.git'
+
 
 
 # Gems used only for assets and not required
@@ -21,4 +23,5 @@ end
 group :development, :test do
   gem 'foreman'
   gem 'rspec'
+  gem 'sunspot_solr'
 end
