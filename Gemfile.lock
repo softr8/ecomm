@@ -7,6 +7,13 @@ GIT
       sunspot_rails (>= 1.3.0rc3)
 
 GIT
+  remote: git://github.com/spree/spree_editor.git
+  revision: 9f000456a32774eddbddb837ea4246f925a55a8e
+  specs:
+    spree_editor (0.50.1)
+      spree_core (>= 0.70.0)
+
+GIT
   remote: git://github.com/spree/spree_recently_viewed.git
   revision: 1156bdb9b4b2872bd625aa38507451d2e5b22bde
   branch: 1156bdb9b4b2872bd625aa38507451d2e5b22bde
@@ -297,6 +304,7 @@ DEPENDENCIES
   rspec
   sass-rails (~> 3.1.5.rc.2)
   spree (= 0.70.3)
+  spree_editor!
   spree_recently_viewed!
   spree_social!
   spree_sunspot_search!
