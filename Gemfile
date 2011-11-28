@@ -2,10 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.2'
 
+gem 'unicorn'
+
 gem 'haml'
 gem 'jquery-rails'
 gem 'mysql2'
-gem 'spree', git: 'https://github.com/spree/spree.git', branch: '0-70-stable'
+gem 'spree', '0.70.3'#git: 'https://github.com/spree/spree.git', branch: '0-70-stable'
+#gem "spree_paypal_express", :git => "git://github.com/spree/spree_paypal_express.git"
+gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git', branch: "1156bdb9b4b2872bd625aa38507451d2e5b22bde"
 gem 'spree_social', :git => 'git://github.com/spree/spree_social.git' , :tag => 'v1.2'
 gem 'spree_sunspot_search', git: 'git://github.com/jbrien/spree_sunspot_search.git'
 
